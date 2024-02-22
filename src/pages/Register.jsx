@@ -34,12 +34,12 @@ const Register = () => {
 
       toast.success(data.message);
       setIsAuthenticated(true);
-      setLoading(false);
+      // setLoading(false);
     } catch (error) {
       toast.error(error.response.data.message);
       // console.log(error);
       setIsAuthenticated(false);
-      setLoading(false);
+      // setLoading(false);
     }
   };
 

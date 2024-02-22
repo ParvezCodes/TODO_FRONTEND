@@ -21,7 +21,6 @@ const Header = () => {
       setLoading(false);
     } catch (error) {
       toast.error(error.response.data.message);
-      // console.log(error);
       setIsAuthenticated(true);
       setLoading(false);
     }
@@ -32,7 +31,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            <LuListTodo style={{fontSize:"25px"}}/>
+            <LuListTodo style={{ fontSize: "25px" }} />
             &nbsp; ProTasker
           </Link>
           <button
