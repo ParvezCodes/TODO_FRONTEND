@@ -32,11 +32,9 @@ const Login = () => {
 
       toast.success(data.message);
       setIsAuthenticated(true);
-      // setLoading(false);
     } catch (error) {
       toast.error(error.response.data.message);
       setIsAuthenticated(false);
-      // setLoading(false);
     }
   };
 
@@ -66,9 +64,7 @@ const Login = () => {
             required
             autoComplete="on"
           />
-          <button type="submit" disabled={loading}>
-            Login
-          </button>
+          <button type="submit">Login</button>
           <h4>Or</h4>
           <Link to="/register">Create New Account</Link>
         </form>

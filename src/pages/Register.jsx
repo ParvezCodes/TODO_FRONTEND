@@ -14,7 +14,6 @@ const Register = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    setLoading(true);
 
     try {
       const { data } = await axios.post(
@@ -34,12 +33,10 @@ const Register = () => {
 
       toast.success(data.message);
       setIsAuthenticated(true);
-      // setLoading(false);
     } catch (error) {
       toast.error(error.response.data.message);
       // console.log(error);
       setIsAuthenticated(false);
-      // setLoading(false);
     }
   };
 
@@ -79,7 +76,7 @@ const Register = () => {
             required
             autoComplete="on"
           />
-          <button type="submit" disabled={loading}>
+          <button type="submit">
             Sign Up
           </button>
           <h4>Or</h4>
